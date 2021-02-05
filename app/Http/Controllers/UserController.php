@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -38,5 +39,24 @@ class UserController extends Controller
         return view('users.edit', [
             'user' => $user,
         ]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param Request $request
+     * @param int $userId
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function update(Request $request, int $userId): RedirectResponse
+    {
+        $user = User::find($userId);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
+
+        return redirect()->back()
+            ->with('success', __('User updated succesfullu'));
     }
 }

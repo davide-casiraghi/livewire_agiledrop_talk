@@ -6,9 +6,9 @@
     </x-slot>
 
     <div>
-        <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-4 sm:mx-auto py-10 sm:px-6 lg:px-8">
             @forelse($users as $user)
-                <ul>
+                <ul class="mt-1">
                     <li>
                         <a class="text-indigo-700" href="{{route('users.edit', $user->id)}}">
                             {{$user->name}}

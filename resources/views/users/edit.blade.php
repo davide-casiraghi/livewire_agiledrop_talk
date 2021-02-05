@@ -6,8 +6,10 @@
         </h2>
     </x-slot>
 
-    <div>
-        <div class="max-w-2xl mx-auto py-10 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mx-4 sm:mx-auto py-10 sm:px-6 lg:px-8">
+        <form method="POST" action="{{ route('users.update',$user->id) }}">
+            @csrf
+            @method('PUT')
 
             {{-- Name --}}
             <div>
@@ -37,6 +39,7 @@
                 </div>
             </div>
 
-        </div>
+        </form>
+
     </div>
 </x-app-layout>
