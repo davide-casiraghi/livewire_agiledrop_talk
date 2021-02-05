@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="laravelTinkerProject">
+    <option name="lastCode" value="&lt;?php&#10;&#10;use App\Models\User;&#10;use Carbon\Carbon;&#10;use Illuminate\Database\Eloquent\Factories\Sequence;&#10;&#10;$user = User::factory()-&gt;create([&#10;                                    'email' =&gt; 'davide.casiraghi@gmail.com',&#10;                                ]);&#10;&#10;&#10;User::factory()-&gt;count(4)-&gt;create();" />
+  </component>
+</project>
