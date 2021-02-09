@@ -11,8 +11,8 @@ class UserProfile extends Component
     public $success = false;
 
     protected $rules = [
-        'user.name' => 'min:3',
-        'user.email' => 'email',
+        'user.name' => ['required', 'min:3'],
+        'user.email' => ['required', 'email'],
     ];
 
     public function mount()
@@ -27,17 +27,8 @@ class UserProfile extends Component
 
     public function submit()
     {
-        /*$validatedData = $this->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255'],
-        ]);
-
-        auth()->user()->update($validatedData);
-        $this->success = true;*/
-
         $this->validate();
         $this->user->save();
-        //auth()->user()->save();
         $this->success = true;
     }
 }
