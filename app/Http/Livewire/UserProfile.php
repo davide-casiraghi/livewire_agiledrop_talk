@@ -15,9 +15,9 @@ class UserProfile extends Component
         'user.email' => ['required', 'email'],
     ];
 
-    public function mount()
+    public function mount(User $user)
     {
-        $this->user = auth()->user();
+        $this->user = $user;
     }
 
     public function render()

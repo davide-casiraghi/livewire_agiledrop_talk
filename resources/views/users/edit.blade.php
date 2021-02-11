@@ -6,5 +6,7 @@
         </h2>
     </x-slot>
 
-    @livewire('user-profile')
+   {{-- @livewire('user-profile')--}}
+
+    @livewire('user-profile', ['user' => $user])
 </x-app-layout>
