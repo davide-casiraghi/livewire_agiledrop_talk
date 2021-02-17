@@ -18,6 +18,11 @@
                 <div class="mt-1">
                     <input wire:model.lazy="user.name" type="text" {{--name="name" --}}id="name" value="{{$user->name}}" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
                 </div>
+                @error('user.name')
+                <span class="text-red-700" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
 
             {{-- Email --}}
@@ -26,6 +31,11 @@
                 <div class="mt-1">
                     <input wire:model.lazy="user.email" type="text" {{--name="email"--}} id="email" value="{{$user->email}}" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" >
                 </div>
+                @error('user.email')
+                <span class="text-red-700" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
 
             {{-- Save/Cancel --}}
