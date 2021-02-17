@@ -51,6 +51,12 @@ class UserController extends Controller
      */
     public function update(Request $request, int $userId): RedirectResponse
     {
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+        ]);
+
+
         $user = User::find($userId);
         $user->name = $request->name;
         $user->email = $request->email;
