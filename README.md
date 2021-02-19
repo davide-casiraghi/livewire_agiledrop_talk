@@ -33,7 +33,7 @@ SSH user: vagrant
 SSH password: vagrant
 ```
 
-Then create the database **movement_meets_life**
+Then create the database **agiledrop_livewire_talk**
 
 ### Setup the dev environment
 
@@ -52,7 +52,7 @@ Config the .env like this:
 DB_CONNECTION=mysql
 DB_HOST=192.168.10.10
 DB_PORT=3306
-DB_DATABASE=movement_meets_life
+DB_DATABASE=agiledrop_livewire_talk
 DB_USERNAME=homestead
 DB_PASSWORD=secret
 ```
